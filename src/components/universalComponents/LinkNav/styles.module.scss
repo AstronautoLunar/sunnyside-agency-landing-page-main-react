@@ -1,0 +1,15 @@
+div.LinkNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 40px;
+
+    margin: 0 20px;
+    
+    a.textLink {
+        color: var(--white);
+
+        text-decoration: none;
+    }
+}
