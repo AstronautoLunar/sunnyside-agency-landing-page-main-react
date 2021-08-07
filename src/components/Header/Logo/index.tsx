@@ -1,4 +1,4 @@
-import styles from './styles.module.scss';
+import logo from "../../../assets/logo.svg";
 
 type LogoData = {
     text: string;
@@ -10,8 +10,7 @@ export default function Logo({
     marginLeft
 }: LogoData):JSX.Element {
     return (
-        <h1 
-            id={styles.Logo}
+        <img
             style={{
                 marginLeft: 
                     marginLeft === undefined 
@@ -20,6 +19,8 @@ export default function Logo({
                     : 
                     marginLeft
             }}
-        >{ text }</h1>
+            src={logo}
+            alt="logo"
+        />
     )
 }

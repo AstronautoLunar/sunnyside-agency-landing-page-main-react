@@ -8,7 +8,9 @@ import "./style/globals.scss";
 export default function App() {
   return (
     <div className="App">
-      <BackgroundMain>
+      <BackgroundMain
+        title="WE ARE CREATIVES"
+      >
         <Header/>
       </BackgroundMain>
     </div>
