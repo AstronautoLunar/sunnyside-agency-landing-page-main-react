@@ -1,0 +1,17 @@
+div#WindowNavMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    div#triangle {
+        width: 0;
+        height: 0;
+
+        border: 20px solid;
+        border-right-color: var(--white);
+        border-left-color: transparent;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+}

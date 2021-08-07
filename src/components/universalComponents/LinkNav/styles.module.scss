@@ -1,4 +1,22 @@
-div.LinkNav {
+div.LinkNavDesktopNormal {
+    background-color: transparent;
+
+    padding: 0;
+    
+    a.textLink {
+        color: var(--white);
+        
+        font-family: Barlow, Helvetica, sans-serif;
+        font-weight: 600;
+
+        
+        text-transform: none;
+    }
+}
+
+div.LinkNavDesktopNormal,
+div.LinkNavDesktopStrong
+{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,10 +24,35 @@ div.LinkNav {
     border-radius: 40px;
 
     margin: 0 20px;
-    
+
+    a.textLink {
+        text-decoration: none;
+    }
+}
+
+div.LinkNavDesktopStrong {
+    background-color: var(--white);
+
+    padding: 17px 27px;
+
+    cursor: pointer;
+
+    transition: all 200ms;
+
+    a.textLink {
+        color: var(--dark);
+
+        font-family: Fraunces, Helvetica, sans-serif;
+        font-weight: 700;
+
+        text-transform: uppercase;
+    }
+}
+
+div.LinkNavDesktopStrong:hover {
+    background-color: var(--white-alpha-button);
+
     a.textLink {
         color: var(--white);
-
-        text-decoration: none;
     }
 }

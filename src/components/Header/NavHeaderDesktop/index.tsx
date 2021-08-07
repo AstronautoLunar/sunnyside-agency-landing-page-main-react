@@ -5,7 +5,10 @@ type NavHeaderDesktopData = {
     marginRight?: number;
 }
 
-export default function NavHeaderDesktop({ children, marginRight }: NavHeaderDesktopData): any {
+export default function NavHeaderDesktop({ 
+    children, 
+    marginRight, 
+}: NavHeaderDesktopData): any {
     return (
         <nav 
             id={styles.NavHeaderDesktop}
