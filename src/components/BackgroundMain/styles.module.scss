@@ -1,4 +1,4 @@
-div#BackgroundMainData {
+div#BackgroundMain {
     background-image: url(../../assets/desktop/image-header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,10 +9,17 @@ div#BackgroundMainData {
     
     position: relative;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
     h1#title {
         font-family: Fraunces, Helvetica, sans-serif;
         font-size: 2.5rem;
         font-weight: 900;
+
+        text-align: center;
 
         white-space: nowrap;
 
@@ -33,5 +40,13 @@ div#BackgroundMainData {
 
     img#iconArrowDown {
         top: 17rem;
+    }
+
+    @media screen and (max-width: 746px) {
+        h1#title {
+            font-size: 1rem;
+
+            white-space: normal;
+        }
     }
 }

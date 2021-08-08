@@ -12,15 +12,21 @@ export default function LinkNav({
 
     const urlLink = "#"
 
+    function logicType(type: string) {
+        if(type === "strong-mobile") {
+            return styles.LinkNavMobileStrong;
+        } else if (type === "strong-desktop") {
+            return styles.LinkNavDesktopStrong;
+        } else if (type === "normal-mobile") {
+            return styles.LinkNavMobileNormal;
+        } else {
+            return styles.LinkNavDesktopNormal;
+        }
+    }
+
     return (
         <div 
-            className={
-                type === "strong"
-                ?
-                styles.LinkNavDesktopStrong
-                :
-                styles.LinkNavDesktopNormal
-            }
+            className={logicType(type)}
         >
             <a
                 href={urlLink}

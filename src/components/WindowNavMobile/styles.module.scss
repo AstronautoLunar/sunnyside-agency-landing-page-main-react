@@ -1,14 +1,21 @@
 div#WindowNavMobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+    width: calc(100% - 80px);
+    
+    position: relative;
 
+    background-color: var(--white);
+
+    padding: 20px;
+    
     div#triangle {
         width: 0;
         height: 0;
 
-        border: 20px solid;
+        position: absolute;
+        right: 0;
+        top: -1.5rem;
+
+        border: 30px solid;
         border-right-color: var(--white);
         border-left-color: transparent;
         border-top-color: transparent;

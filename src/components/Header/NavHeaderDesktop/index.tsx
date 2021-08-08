@@ -8,7 +8,7 @@ type NavHeaderDesktopData = {
 export default function NavHeaderDesktop({ 
     children, 
     marginRight, 
-}: NavHeaderDesktopData): any {
+}: NavHeaderDesktopData): JSX.Element {
     return (
         <nav 
             id={styles.NavHeaderDesktop}
@@ -21,7 +21,9 @@ export default function NavHeaderDesktop({
                     marginRight
             }}
         >
-            { children }
+            <ul id={styles.listMenuMobile}>
+                { children }
+            </ul>
         </nav>
     )
 }

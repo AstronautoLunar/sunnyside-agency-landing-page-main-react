@@ -1,21 +1,36 @@
 div.LinkNavDesktopNormal {
+
+    a.textLink {
+        color: var(--white);
+    }
+}
+
+div.LinkNavDesktopNormal, 
+div.LinkNavMobileNormal 
+{
     background-color: transparent;
 
     padding: 0;
     
     a.textLink {
-        color: var(--white);
-        
         font-family: Barlow, Helvetica, sans-serif;
         font-weight: 600;
-
         
         text-transform: none;
     }
 }
 
+div.LinkNavMobileNormal {
+
+    a.textLink {
+        color: var(--very-dark-desaturated-blue);
+    }
+}
+
 div.LinkNavDesktopNormal,
-div.LinkNavDesktopStrong
+div.LinkNavDesktopStrong,
+div.LinkNavMobileNormal,
+div.LinkNavMobileStrong
 {
     display: flex;
     justify-content: center;
@@ -33,6 +48,14 @@ div.LinkNavDesktopStrong
 div.LinkNavDesktopStrong {
     background-color: var(--white);
 
+    a.textLink {
+        color: var(--black);
+    }
+}
+
+div.LinkNavDesktopStrong,
+div.LinkNavMobileStrong 
+{
     padding: 17px 27px;
 
     cursor: pointer;
@@ -40,12 +63,18 @@ div.LinkNavDesktopStrong {
     transition: all 200ms;
 
     a.textLink {
-        color: var(--dark);
-
         font-family: Fraunces, Helvetica, sans-serif;
         font-weight: 700;
 
         text-transform: uppercase;
+    }
+}
+
+div.LinkNavMobileStrong {
+    background-color: var(--yellow);
+
+    a.textLink {
+        color: var(--black)
     }
 }
 

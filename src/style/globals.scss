@@ -21,6 +21,24 @@
     --white: hsl(0, 0%, 100%);
 
     // Extra Colors
-    --dark: #000000;
+    --black: #000000;
     --white-alpha-button: rgba(255, 255, 255, 0.3);
+}
+
+ul#list-menu-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    li.item-menu {
+        margin-bottom: 20px;
+
+        list-style-type: none;
+        list-style-position: outside;
+    }
+
+    li.item-menu:last-of-type {
+        margin-bottom: 0;
+    }
 }

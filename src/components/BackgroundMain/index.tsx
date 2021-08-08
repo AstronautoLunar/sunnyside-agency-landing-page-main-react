@@ -3,7 +3,7 @@ import iconArrowDown from '../../assets/icon-arrow-down.svg';
 import styles from './styles.module.scss';
 
 type BackgroundMainData = {
-    children: JSX.Element;
+    children: any;
     title: string;
 }
 
@@ -13,8 +13,7 @@ export default function BackgroundMain({
 }: BackgroundMainData):JSX.Element {
     
     return (
-        <div id={styles.BackgroundMainData}>
-            { children }
+        <div id={styles.BackgroundMain}>
             <h1 id={styles.title}>{ title }</h1>
             <figure role="figure">
                 <img
@@ -23,6 +22,7 @@ export default function BackgroundMain({
                     alt="icon arrow down"
                 />
             </figure>
+            { children }
         </div>
     )
 }

@@ -6,7 +6,10 @@ import {
 
 import Logo from './Logo';
 import NavHeaderDesktop from './NavHeaderDesktop';
+import ButtonMenuMobile from './ButtonMenuMobile';
 import { LinkNav } from '../universalComponents';
+
+import { useMenu } from '../../contexts/MenuContext';
 
 import styles from './styles.module.scss';
 
@@ -15,6 +18,12 @@ export default function Header():JSX.Element {
         navResponsive, 
         setNavResponsive 
     ] = useState(false);
+    
+    let { 
+        setMenu,
+        menuRef, 
+        toggleMenu 
+    } = useMenu();
 
     const navResponsiveRef = useRef(navResponsive);
 
@@ -26,34 +35,40 @@ export default function Header():JSX.Element {
                 setNavResponsive(navResponsiveRef.current = true);
             } else {
                 setNavResponsive(navResponsiveRef.current = false);
+                
+                setMenu(menuRef.current = false);
             }
         }
 
         changeNavResponsive(mediaQuerieList);
 
         mediaQuerieList.addListener(changeNavResponsive);
-    }, [ navResponsiveRef ])
+    }, [ 
+        navResponsiveRef, 
+        menuRef,
+        setMenu,
+    ])
 
-    const linksNavHeader = [
+    const linksNavHeaderDesktop = [
         {
             id: 1,
             text: "About",
-            type: "normal"
+            type: "normal-desktop"
         },
         {
             id: 2,
             text: "Services",
-            type: "normal"
+            type: "normal-desktop"
         },
         {
             id: 3,
             text: "Projects",
-            type: "normal"
+            type: "normal-desktop"
         },
         {
             id: 4,
             text: "Contact",
-            type: "strong"
+            type: "strong-desktop"
         }
     ]
 
@@ -67,7 +82,10 @@ export default function Header():JSX.Element {
                 navResponsiveRef.current
                 ?
                 (
-                    <h1>Olá mundo</h1>
+                    <ButtonMenuMobile
+                        marginRight={40}
+                        click={toggleMenu}
+                    />
                 )
                 :
                 (
@@ -75,12 +93,17 @@ export default function Header():JSX.Element {
                         marginRight={40}
                     >
                         {
-                            linksNavHeader.map(item => (
-                                <LinkNav
+                            linksNavHeaderDesktop.map(item => (
+                                <li
+                                    className={styles.itemMenu}
                                     key={item.id}
-                                    text={item.text}
-                                    type={item.type}
-                                />
+                                >
+                                    <LinkNav
+                                        key={item.id}
+                                        text={item.text}
+                                        type={item.type}
+                                    />
+                                </li>
                             ))
                         }
                     </NavHeaderDesktop>

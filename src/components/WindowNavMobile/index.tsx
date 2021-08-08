@@ -10,9 +10,7 @@ export default function WindowNavMobile({ children }: WindowNavMobileData):JSX.E
             <div
                 id={styles.triangle}
             />
-            <div id={styles.content}>
-                { children }
-            </div>
+            { children }
         </div>
     )
 }

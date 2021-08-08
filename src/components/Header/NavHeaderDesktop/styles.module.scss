@@ -1,5 +1,7 @@
 nav#NavHeaderDesktop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    ul#listMenuMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
