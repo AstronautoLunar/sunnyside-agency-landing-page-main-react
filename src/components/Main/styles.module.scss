@@ -1,0 +1,8 @@
+main#Main {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+
+    img.imageMain {
+        width: 100%;
+    }
+}

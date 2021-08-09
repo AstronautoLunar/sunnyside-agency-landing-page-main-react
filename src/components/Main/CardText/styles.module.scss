@@ -1,0 +1,39 @@
+section.section {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // padding: 10vw 11vw;
+
+    article.article {
+        width: 371.281px;
+        height: 184.797px;
+
+        div.CardText {
+            
+            h3.title {
+                color: var(--very-dark-desaturated-blue);
+                
+                font-size: 2rem;
+                font-family: Fraunces, Helvetica, sans-serif;
+                font-weight: 900;
+            }
+
+            h3.title, 
+            p.paragraph 
+            {
+                margin-bottom: 20px;
+            }
+
+            p.paragraph {
+                font-family: Barlow, Helvetica, sans-serif;
+                font-size: 14.5px;
+
+                color: var(--dark-grayish-blue);
+
+            }
+        }
+    }
+}

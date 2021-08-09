@@ -2,7 +2,8 @@ import {
   Header, 
   BackgroundMain, 
   WindowNavMobile, 
-  LinkNav
+  LinkNav,
+  Main
 } from "./components";
 
 import { useMenu } from './contexts/MenuContext';
@@ -62,6 +63,7 @@ export default function App() {
           </WindowNavMobile>
         }
       </BackgroundMain>
+      <Main/>
     </div>
   );
 }
