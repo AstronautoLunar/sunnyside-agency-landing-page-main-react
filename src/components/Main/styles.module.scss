@@ -2,7 +2,11 @@ main#Main {
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
 
-    img.imageMain {
-        width: 100%;
+    figure.figure {
+        
+        img.imageMain {
+            width: 100%;
+            height: 100%;
+        }
     }
 }
