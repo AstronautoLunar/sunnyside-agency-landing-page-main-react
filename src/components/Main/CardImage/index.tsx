@@ -4,15 +4,20 @@ type CardImageData = {
     title: string;
     paragraph: string;
     imageSrc: string;
+    identifier: string;
 }
 
 export default function CardImage({ 
     title, 
     paragraph, 
-    imageSrc
+    imageSrc, 
+    identifier
 }: CardImageData) {
     return (
-        <section className={styles.section}>
+        <section 
+            id={ identifier }
+            className={styles.section}
+        >
             <div 
                 className={styles.CardImage}
                 style={{

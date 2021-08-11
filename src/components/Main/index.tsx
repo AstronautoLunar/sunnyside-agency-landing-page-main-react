@@ -16,18 +16,25 @@ export default function Main() {
             role="main"
         >
             <CardText
+                identifier="item1"
                 title="Transform your brand"
                 paragraph="We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you."
                 colorButton="var(--yellow)"
             />
-            <figure className={styles.figure}>
+            <figure     
+                id="item2"
+                className={styles.figure}
+            >
                 <img
                     className={styles.imageMain}
                     src={ imageEgg }
                     alt="egg"
                 />
             </figure>
-            <figure className={styles.figure}>
+            <figure 
+                id="item3"
+                className={styles.figure}
+            >
                 <img
                     className={styles.imageMain}
                     src={ imageCup }
@@ -35,16 +42,19 @@ export default function Main() {
                 />
             </figure>
             <CardText
+                identifier="item4"
                 title="Stand out to the right audience"
                 paragraph="Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places."
                 colorButton="var(--soft-red)"
             />
             <CardImage
+                identifier="item5"
                 title="Graphic Design"
                 paragraph="Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients attention."
                 imageSrc={ imageCard1 }
             />
             <CardImage
+                identifier="item6"
                 title="Photography"
                 paragraph="Increase your credibility by getting the most stunning, high-quality photos that improve your business image."
                 imageSrc={ imageCard2 }

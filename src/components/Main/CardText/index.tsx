@@ -6,15 +6,18 @@ type CardTextData = {
     title: string;
     paragraph: string
     colorButton: string,
+    identifier: string,
 }
 
 export default function CardText({
     title,
     paragraph,
-    colorButton
+    colorButton,
+    identifier
 }: CardTextData) {
     return (
-        <section 
+        <section
+            id={ identifier }
             className={styles.section}
         >
             <article 

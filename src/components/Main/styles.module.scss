@@ -1,6 +1,17 @@
 main#Main {
     display: grid;
-    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    grid-template-areas: 
+        "cardText1 image1"
+        "image2 cardText2"
+        "cardImage1 cardImage2"
+    ;
+    /*
+        Esse valores do grid-template-areas foram
+        criadas no globals.scss
+
+        coloquei na raiz para ter total certeza
+        que não haverá erros
+    */
 
     figure.figure {
         
