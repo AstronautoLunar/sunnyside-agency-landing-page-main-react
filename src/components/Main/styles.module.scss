@@ -4,6 +4,7 @@ main#Main {
         "cardText1 image1"
         "image2 cardText2"
         "cardImage1 cardImage2"
+        "sectionCardComments sectionCardComments"
     ;
     /*
         Esse valores do grid-template-areas foram
@@ -20,6 +21,33 @@ main#Main {
             height: 100%;
         }
     }
+
+    section#userComments {
+        grid-area: sectionCardComments;
+
+        width: 100%;
+        height: 40vw;
+
+        flex-direction: column;
+        
+        h3#titleUserComments {
+            color: var(--grayish-blue);
+            
+            font-family: Fraunces, Helvetica, sans-serif;
+        }
+        
+        // div#listCards {
+            
+        // }
+    }
+}
+
+section#userComments,
+div#listCards
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 figure.figure,

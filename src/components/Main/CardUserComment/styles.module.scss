@@ -1,0 +1,33 @@
+article.article {
+
+    div.CardComments {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        img.imageUser {
+            width: 50px;
+            height: 50px;
+
+            border-radius: 100%;
+        }
+
+        p.comment {
+            text-align: center;
+
+            color: var(--very-dark-grayish-blue);
+
+            line-height: 25px;
+        }
+
+        span.nameUser {
+            font-family: Fraunces, Helvetica, sans-serif;
+            font-weight: 900;
+        }
+
+        span.profession {
+            color: var(--grayish-blue);
+        }
+    }
+}
