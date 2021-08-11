@@ -12,7 +12,8 @@ section.section {
         height: 184.797px;
 
         div.CardText {
-            
+            flex-direction: column;
+
             h3.title {
                 color: var(--very-dark-desaturated-blue);
                 
@@ -30,6 +31,43 @@ section.section {
                 color: var(--dark-grayish-blue);
                 
                 margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+section.section,
+div.CardText
+{
+    display: flex;
+}
+
+@media screen and (max-width: 852px) {
+    section.section {
+        height: 25rem;
+
+        article.article {
+            width: calc(100% - 50px);
+            height: auto;
+
+            div.CardText {
+                align-items: center;
+
+                h3.title {
+                    margin-bottom: 30px;
+                }
+
+                h3.title,
+                p.paragraph 
+                {
+                    text-align: center;
+                }
+
+                p.paragraph {
+                    line-height: 25px;
+
+                    font-size: 15px;
+                }
             }
         }
     }

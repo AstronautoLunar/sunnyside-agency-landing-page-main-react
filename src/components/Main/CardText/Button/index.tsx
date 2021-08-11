@@ -7,7 +7,7 @@ type ButtonData = {
 
 export default function Button({ 
     text, 
-    colorBar 
+    colorBar
 }: ButtonData) {
     const pathURL = "#"
 

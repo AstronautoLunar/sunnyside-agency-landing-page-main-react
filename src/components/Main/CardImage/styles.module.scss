@@ -7,7 +7,7 @@ section.section {
         width: 100%;
         height: 40vw;
 
-        padding: 60px;
+        padding-bottom: 60px;
         
         align-items: flex-end;
         
@@ -40,6 +40,26 @@ section.section {
 
                 color: var(--very-dark-desaturated-blue);
             }
+
+            @media screen and (max-width: 1132px) {
+                p.paragraph {
+                    width: auto;
+                }
+            }
+
+            @media screen and (max-width: 852px) {
+                h1.title {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 852px) {
+        div.CardImage {
+            height: 35rem;
+
+            background-size: cover;
         }
     }
 }

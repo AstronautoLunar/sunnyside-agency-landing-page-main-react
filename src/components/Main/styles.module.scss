@@ -16,8 +16,28 @@ main#Main {
     figure.figure {
         
         img.imageMain {
-            width: 100%;
+            // width: 100%;
             height: 100%;
         }
+    }
+}
+
+figure.figure,
+img.imageMain,
+main#Main
+{
+    width: 100%;
+}
+
+@media screen and (max-width: 852px) {
+    main#Main {
+        grid-template-areas: 
+            "image1"
+            "cardText1"
+            "image2"
+            "cardText2"
+            "cardImage1"
+            "cardImage2"
+        ;
     }
 }
