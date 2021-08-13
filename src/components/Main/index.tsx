@@ -7,9 +7,13 @@ import imageEgg from '../../assets/desktop/image-transform.jpg'
 import imageCup from '../../assets/desktop/image-stand-out.jpg'
 import imageCard1 from '../../assets/desktop/image-graphic-design.jpg';
 import imageCard2 from '../../assets/desktop/image-photography.jpg';
-import userImage1 from '../../assets/image-emily.jpg';
-import userImage2 from '../../assets/image-thomas.jpg';
-import userImage3 from '../../assets/image-jennie.jpg';
+import imageUser1 from '../../assets/image-emily.jpg';
+import imageUser2 from '../../assets/image-thomas.jpg';
+import imageUser3 from '../../assets/image-jennie.jpg';
+import imageFeatured1 from '../../assets/desktop/image-gallery-milkbottles.jpg'
+import imageFeatured2 from '../../assets/desktop/image-gallery-orange.jpg'
+import imageFeatured3 from '../../assets/desktop/image-gallery-cone.jpg'
+import imageFeatured4 from '../../assets/desktop/image-gallery-sugarcubes.jpg'
 
 import styles from './styles.module.scss';
 
@@ -17,7 +21,7 @@ export default function Main() {
     const userComments = [
         {
             id: 1,
-            userImage: userImage1,
+            userImage: imageUser1,
             altImage: "comment from Emily R",
             comment: "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
             userName: "Emily R.",
@@ -25,7 +29,7 @@ export default function Main() {
         },
         {
             id: 2,
-            userImage: userImage2,
+            userImage: imageUser2,
             altImage: "comment from Thomas S",
             comment: "Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.",
             userName: "Thomas S.",
@@ -33,7 +37,7 @@ export default function Main() {
         },
         {
             id: 3,
-            userImage: userImage3,
+            userImage: imageUser3,
             altImage: "comment from Jennie F",
             comment: "Incredible end result! Our sales increased over 400% when we worked with Sunnyside Highly recommended!",
             userName: "Jennie F.",
@@ -41,9 +45,28 @@ export default function Main() {
         }
     ]
 
-    /*
-        Parei na parte de adicionar os dados e mapear-los em componentes
-    */
+    const imagesFeatured = [
+        {
+            id: 1,
+            srcImage: imageFeatured1,
+            altImage: "image gallery milkbottles"
+        },
+        {
+            id: 2,
+            srcImage: imageFeatured2,
+            altImage: "image gallery orange"
+        },
+        {
+            id: 3,
+            srcImage: imageFeatured3,
+            altImage: "image gallery cone"
+        },
+        {
+            id: 4,
+            srcImage: imageFeatured4,
+            altImage: "image gallery sugarcubes"
+        }
+    ]
 
     return (
         <main 
@@ -111,6 +134,17 @@ export default function Main() {
                     }
                 </div>
             </section>
+            <div id={styles.imagesFeatured}>
+                    {
+                        imagesFeatured.map(item => (
+                            <img
+                                className={styles.imagesFeaturedStyle}
+                                src={item.srcImage}
+                                alt={item.altImage}
+                            />
+                        ))
+                    }
+            </div>
       </main>
     )
 } 

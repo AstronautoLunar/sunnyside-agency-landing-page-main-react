@@ -5,6 +5,7 @@ main#Main {
         "image2 cardText2"
         "cardImage1 cardImage2"
         "sectionCardComments sectionCardComments"
+        "imagesFeatured imagesFeatured"
     ;
     /*
         Esse valores do grid-template-areas foram
@@ -28,13 +29,13 @@ main#Main {
 
         flex-direction: column;
         
+        margin-bottom: 5rem;
+
         h3#titleUserComments {
             color: var(--grayish-blue);
             
             font-family: Fraunces, Helvetica, sans-serif;
             font-size: 1rem;
-
-            margin-bottom: 5rem;
 
             letter-spacing: 0.5rem;
 
@@ -43,13 +44,32 @@ main#Main {
             margin: 5rem 0;
         }
     }
+
+    div#imagesFeatured {
+        width: 100%;
+        height: 25rem;
+
+        grid-area: imagesFeatured;
+        
+        img.imagesFeaturedStyle {
+            width: 25%;
+
+            object-fit: cover;
+        }
+    }
+}
+
+section#userComments,
+div#listCards,
+div#imagesFeatured
+{
+    display: flex;
+    justify-content: center;
 }
 
 section#userComments,
 div#listCards
 {
-    display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -70,6 +90,7 @@ main#Main
             "cardImage1"
             "cardImage2"
             "sectionCardComments"
+            "imagesFeatured"
         ;
 
         section#userComments {
@@ -77,6 +98,22 @@ main#Main
 
             div#listCards {
                 flex-direction: column;
+            }
+        }
+
+        div#imagesFeatured {
+            display: grid;
+            grid-template: auto auto / auto auto;
+            justify-content: stretch;
+            align-content: stretch;
+            justify-items: stretch;
+            align-items: stretch;
+
+            height: auto;
+
+            img.imagesFeaturedStyle {
+                width: 100%;
+                height: 40vw;
             }
         }
     }
