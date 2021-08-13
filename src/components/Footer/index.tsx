@@ -52,7 +52,9 @@ export default function Footer() {
             <ul id={styles.listLinks}>
                 {
                     links.map(item => (
-                        <li className={styles.itemsLink}>
+                        <li className={styles.itemsLink}
+                            key={item.id}
+                        >
                             <a 
                                 className={styles.links}
                                 href={hrefLink}
@@ -66,7 +68,9 @@ export default function Footer() {
             <ul id={styles.icons}>
                 {
                     icons.map(item => (
-                        <li className={styles.itemsIcon}>
+                        <li className={styles.itemsIcon}
+                            key={item.id}
+                        >
                             <a href={hrefLink}>
                                 <img
                                     key={item.id}

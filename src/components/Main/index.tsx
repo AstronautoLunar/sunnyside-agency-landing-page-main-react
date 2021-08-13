@@ -138,6 +138,7 @@ export default function Main() {
                     {
                         imagesFeatured.map(item => (
                             <img
+                                key={item.id}
                                 className={styles.imagesFeaturedStyle}
                                 src={item.srcImage}
                                 alt={item.altImage}
