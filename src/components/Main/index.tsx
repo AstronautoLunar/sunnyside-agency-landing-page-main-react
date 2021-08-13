@@ -1,7 +1,7 @@
 
 import CardText from './CardText';
 import CardImage from './CardImage';
-// import CardUserComment from './CardUserComment';
+import CardUserComment from './CardUserComment';
 
 import imageEgg from '../../assets/desktop/image-transform.jpg'
 import imageCup from '../../assets/desktop/image-stand-out.jpg'
@@ -18,6 +18,7 @@ export default function Main() {
         {
             id: 1,
             userImage: userImage1,
+            altImage: "comment from Emily R",
             comment: "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
             userName: "Emily R.",
             profession: "Marketing Director"
@@ -25,6 +26,7 @@ export default function Main() {
         {
             id: 2,
             userImage: userImage2,
+            altImage: "comment from Thomas S",
             comment: "Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.",
             userName: "Thomas S.",
             profession: "Chief Operating Officer"
@@ -32,6 +34,7 @@ export default function Main() {
         {
             id: 3,
             userImage: userImage3,
+            altImage: "comment from Jennie F",
             comment: "Incredible end result! Our sales increased over 400% when we worked with Sunnyside Highly recommended!",
             userName: "Jennie F.",
             profession: "Business Owner"
@@ -94,7 +97,18 @@ export default function Main() {
             <section id={styles.userComments}>
                 <h3 id={styles.titleUserComments}>CLIENT TESTIMONIALS</h3>
                 <div id={styles.listCards}>
-
+                    {
+                        userComments.map(item => (
+                            <CardUserComment
+                                key={item.id}
+                                srcImageUser={item.userImage}
+                                altImageUser={item.altImage}
+                                comment={item.comment}
+                                nameUser={item.userName}
+                                profession={item.profession}
+                            />
+                        ))
+                    }
                 </div>
             </section>
       </main>
