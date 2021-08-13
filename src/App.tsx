@@ -3,7 +3,8 @@ import {
   BackgroundMain, 
   WindowNavMobile, 
   LinkNav,
-  Main
+  Main,
+  Footer
 } from "./components";
 
 import { useMenu } from './contexts/MenuContext';
@@ -64,6 +65,7 @@ export default function App() {
         }
       </BackgroundMain>
       <Main/>
+      <Footer/>
     </div>
   );
 }
