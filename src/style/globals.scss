@@ -42,3 +42,27 @@ ul#list-menu-mobile {
         margin-bottom: 0;
     }
 }
+
+#item1 {
+    grid-area: cardText1;
+}
+
+#item2 {
+    grid-area: image1;
+}
+
+#item3 {
+    grid-area: image2;
+}
+
+#item4 {
+    grid-area: cardText2;
+}
+
+#item5 {
+    grid-area: cardImage1;
+}
+
+#item6 {
+    grid-area: cardImage2;
+} 
