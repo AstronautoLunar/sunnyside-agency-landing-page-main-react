@@ -28,6 +28,12 @@ footer#Footer {
         
         
     }
+
+    @media screen and (max-width: 418px) {
+        ul#listLinks {
+            width: 15rem;
+        }
+    }
     
     ul#listLinks,
     ul#icons
